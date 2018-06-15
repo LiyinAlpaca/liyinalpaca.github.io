@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="JavaScript是世界上最好的语言.">
+    <meta name="keyword" content="">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="Blog" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    
+    <title>
+        
+    </title>
+
+    <link rel="canonical" href="https://liyinalpaca.github.io/blog/hexo-blog/about/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/hexo-blog/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/hexo-blog/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/hexo-blog/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/hexo-blog/">
+                <span class="brand-logo">
+                    Liyin
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/hexo-blog/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+                            
+						
+                    
+                        
+							
+								
+
+							
+						
+                    
+                        
+							
+                        <li>
+                            <a href="/hexo-blog/works/">works</a>
+                        </li>
+							
+						
+                    
+                        
+							
+                        <li>
+                            <a href="/hexo-blog/archive/">archive</a>
+                        </li>
+							
+						
+                    
+					
+					
+						<li>
+							<a href="/hexo-blog/about">About</a>
+						</li>
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<style>
+    #about-header{
+        margin-top: 85px;
+    }
+    #about-header img{
+        width: 145px;
+    }
+    .offer-body,
+    .person-body,
+    .project-body,
+    .skills-body,
+    .work-body,
+    .learn-body{
+        padding-left: 25px;
+    }
+    p{
+        margin:0;
+        font-size: 15px;
+    }
+    .body-section{
+        padding-left: 15px;
+    }
+    #offer ul{
+        margin-left: 20px;
+        margin-bottom: 5px!important;
+        border-left: 4px darkgray solid;
+        padding-left: 8px;
+
+    }
+    li{
+        list-style: none;
+        font-size: 15px;
+
+    }
+    .title{
+        color: #777;
+    }
+    .title>span{margin-right: 5px}
+    .detail-info-xueli{
+        display: block;
+        padding-left: 70px;
+    }
+
+    .about-header-left h3{
+        text-align: center;
+    }
+
+    .about-header-left p{
+        padding-left: 30px;
+    }
+
+    .about-header-right {
+        padding-left: 30px;
+    }
+
+@media (min-width: 992px) {
+    .about-header-left {
+        float: left;
+    }
+    .about-header-left p{
+        padding-left: 0;
+    }
+    .about-header-right {
+        float: left;
+        margin-left: 15px;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-left: 1px darkgray solid;
+        margin-top: 24px;
+        text-align:left;
+    }
+}
+
+
+</style>
+
+<!-- Chinese Version -->
+<div class="zh post-container">
+    <div class="content" id="about-header"> 
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
+                <div class="about-header-left">
+                    <div>
+                        <img src="https://avatars3.githubusercontent.com/u/16162374?s=400&u=e3ac3bb5684130777a5454920c7219bb81dab385&v=4"  style="border-radius: 50%;"/>
+                    </div>
+                    <div>
+                    <h3>李寅</h3>
+                    <p>求职意向：Web前端实习</p>
+                    </div>
+                </div>
+                <div class="about-header-right">
+                    <p>电话 :181-1121-1504</p>
+                    <p>邮箱 :liyin00@outlook.com</p>
+                    <p>微信 :LiyinAlpaca</p>
+                    <p>学校 :四川职业技术学院,软件工程</p>
+                    <p>地址 :四川,成都</p>
+                    <p>状态 :在读</p>
+                </div>
+            </div>
+        </div>
+        <!--正文-->
+        <div class="row" id="offer">
+            <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
+                <div>
+                    <h3 class="title"><span class="glyphicon glyphicon-list-alt"></span> 专业技能</h3>
+                    <ul>
+                        <li>前端基础: 熟悉HTML5,CSS3,ES5,ES6等前端基础知识</li>
+                        <li>CSS: 熟悉CSS布局基础,CSS3动画,Flex布局,有Bootstrap,Semantic-UI框架的开发经验</li>
+                        <li>前端框架: 熟练使用Jquery以及React框架,并熟悉断点调试</li>
+                        <li>后端知识: 掌握PHP,NodeJS,MySQL基础,了解Yii等后端MVC框架</li>
+                        <li>构建工具: 熟悉Sass,Less,掌握Gulp,Webpack基础</li>
+                        <li>其他: 熟悉Git,有浓厚的学习兴趣与学徒精神</li>
+                    </ul>
+                </div>
+                <div class="work-experience">
+                    <h3 class="title"><span class="glyphicon glyphicon-briefcase"></span> 工作经历</h3>
+                    <p>
+                        2017年10月-2017年11月, 四川邻舍有限科技有限公司前端助理
+                    </p>
+                    <div>
+                        <ul>
+                            <li>参与 <a href="http://www.lingser.com/picture/showproduct.php?lang=cn&id=55">河马找房-房产中介一键式智能管理系统</a> 的开发.</li>
+                            <li>使用 jQuery + Bootstrap 完成网站的静态版本.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-show">
+                    <h3 class="title"><span class="glyphicon glyphicon-folder-open"></span> 个人项目</h3>
+                    <p>基于Semantic-UI写的:<a href="https://liyinalpaca.github.io/semantic-example/login.html" target="_blank">网页模版</a></p>
+                    <div>
+                        <ul>
+                            <li>大量采用flex布局,响应式布局.</li>
+                            <li>用于参加校园网页设计设计大赛并获得第一名.</li></ul>
+                    </div>
+                    <p>基于React与SVG写的<a href="https://liyinalpaca.github.io/subway-chengdu/">成都地图DEMO</a></p>
+                    <div>
+                        <ul>
+                            <li>实现地图模块的状态提升与数据绑定.</li>
+                            <li>可以计算两点之间的最短距离(数据不完善).</li>
+                            <li>使用alloyfinger实现了基本的移动端手势支持.</li>
+                        </ul>
+                    </div>
+                    <a href="https://liyinalpaca.github.io/hexo-blog/works/" target="_blank">更多的项目<span class="glyphicon glyphicon-link"></span></a>
+                </div>
+                <div>
+                    <h3 class="title"><span class="glyphicon glyphicon-book"></span>正在深入学习的</h3>
+                    <ul>
+                        <li>ES6/7 新特性</li>
+                        <li>React 全家桶</li>
+                        <li>Hybrid 移动开发</li>
+                    </ul>
+                </div>
+            </div>
+        </div></div>
+</div>
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Blog 2018
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/hexo-blog/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/hexo-blog/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/hexo-blog/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://liyinalpaca.github.io/blog/hexo-blog/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="https://avatars3.githubusercontent.com/u/16162374?s=400&amp;amp;u=e3ac3bb5684130777a5454920c7219bb81dab385&amp;amp;v=4">
+</body>
+
+</html>
